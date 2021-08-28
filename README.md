@@ -10,7 +10,7 @@
     sudo apt install docker-ce
 ```
 
-3. Conectarse por FTP y subir el proyecto
+3. Conectarse via FTP y subir el proyecto
 
 4. Via SSH ir a la carpeta donde se encuentra el archivo Dockerfile y ejecutar
 ```bash
