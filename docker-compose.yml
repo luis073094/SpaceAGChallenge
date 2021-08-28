@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=SpaceAGChallengeDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    networks:
+      - djangonetwork
+
+  spaceagchallenge:
+    volumes: 
+      - static:/static
+    env_file: 
+      - .env
+    build:
+      context: .
+    ports: 
+      - "8000:8000"
+    networks:
+      - djangonetwork
+    depends_on: 
+      - db
+
+  nginx:
+    build: ./nginx
+    volumes: 
+      - static:/static
+    ports: 
+      - "80:80"
+    networks:
+      - djangonetwork
+    depends_on: 
+      - spaceagchallenge
+
+networks:
+  djangonetwork:
+    driver: bridge
+volumes:
+  static:
