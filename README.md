@@ -23,51 +23,51 @@
 
 ## Ejemplos para GraphQL
 ```bash
-#mutation {
-#  create_worker: createWorker(firstName: "Luis", lastName: "Mundaca", function: "") {
-#    worker {
-# 		 id
-#      firstName
-#      lastName
-#      function
-#      createdAt
-#    }
-#  }
-#}
-#
+mutation {
+  create_worker: createWorker(firstName: "Luis", lastName: "Mundaca", function: "") {
+    worker {
+ 		 id
+      firstName
+      lastName
+      function
+      createdAt
+    }
+  }
+}
 
-#mutation {
-#  update_worker: updateWorker(id: "4eef2cc6-60a9-45a6-a01d-18a661b4a1d8",
-#    firstName: "Plastic", lastName: "Plastic2", function: "Harvest") {
-#    worker {
-# 		 id
-#      firstName
-#      lastName
-#      function
-#      createdAt
-#    }
-#  }
-#}
-#
 
-#mutation {
-#  partial_update_worker: partial_updateWorker(id: "4eef2cc6-60a9-45a6-a01d-18a661b4a1d8",
-#    input: {firstName: "Plastic33"}
-#  ) {
-#    worker {
-#      id
-#      firstName
-#      lastName
-#      function
-#      createdAt
-#    }
-#  }
-#}
-#
+mutation {
+  update_worker: updateWorker(id: "4eef2cc6-60a9-45a6-a01d-18a661b4a1d8",
+    firstName: "Plastic", lastName: "Plastic2", function: "Harvest") {
+    worker {
+ 		 id
+      firstName
+      lastName
+      function
+      createdAt
+    }
+  }
+}
 
-#mutation {
-#  delete_worker: deleteWorker(id: "aa8d3b04-4283-4146-97aa-936796fcc692") {
-#    response
-#  }
-#}
+
+mutation {
+  partial_update_worker: partial_updateWorker(id: "4eef2cc6-60a9-45a6-a01d-18a661b4a1d8",
+    input: {firstName: "Plastic33"}
+  ) {
+    worker {
+      id
+      firstName
+      lastName
+      function
+      createdAt
+    }
+  }
+}
+
+
+mutation {
+  delete_worker: deleteWorker(id: "aa8d3b04-4283-4146-97aa-936796fcc692") {
+    response
+  }
+}
 ```
