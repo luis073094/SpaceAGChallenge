@@ -30,7 +30,7 @@ class createWorker(graphene.Mutation):
     def mutate(cls, root, info, first_name, last_name, function):
         function = function.strip()
 
-        if function.upper() != 'HARVEST' or function.upper() != 'PRUNNING' or function.upper() != 'SCOUTING' or function.upper() != 'OTHER':
+        if function.upper() != 'HARVEST' and function.upper() != 'PRUNNING' and function.upper() != 'SCOUTING' and function.upper() != 'OTHER':
             function = 'Other'
 
         newWorker = FieldWorker.objects.create(
