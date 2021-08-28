@@ -19,9 +19,13 @@ from django.urls import include, path
 from rest_framework import routers
 from FieldWorker import views
 
+from graphene_django.views import GraphQLView
+from FieldWorker.schema import schema
+
 router = routers.DefaultRouter()
 router.register(r'v1/field_workers', views.WorkerViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path("graphql", GraphQLView.as_view(graphiql=True, schema=schema))
 ]
