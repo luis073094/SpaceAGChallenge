@@ -31,10 +31,28 @@
 
 ### Ejemplos para GraphQL
 ```bash
+{
+  allWorkers {
+    id
+    firstName
+    lastName
+    createdAt
+  }
+}
+
+{
+  worker(workerId: "6285174b-3697-4b52-9863-3bd6de4897a5") {
+    id
+    firstName
+    lastName
+    createdAt
+  }
+}
+
 mutation {
   create_worker: createWorker(firstName: "Luis", lastName: "Mundaca", function: "") {
     worker {
- 		 id
+      id
       firstName
       lastName
       function
@@ -48,7 +66,7 @@ mutation {
   update_worker: updateWorker(id: "4eef2cc6-60a9-45a6-a01d-18a661b4a1d8",
     firstName: "Plastic", lastName: "Plastic2", function: "Harvest") {
     worker {
- 		 id
+ 		  id
       firstName
       lastName
       function
