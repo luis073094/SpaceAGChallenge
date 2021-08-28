@@ -8,13 +8,15 @@ class FieldWorkerType(DjangoObjectType):
         model = FieldWorker
         fields = ('id', 'first_name', 'last_name', 'function', 'created_at')
 
-
 class Query(graphene.ObjectType):
-    fieldWorkers = graphene.List(FieldWorkerType)
+    all_workers = graphene.List(FieldWorkerType)
+    worker = graphene.Field(FieldWorkerType, worker_id=graphene.String())
 
-    def resolve_workers(root, info, **kwargs):
-        # Querying a list
+    def resolve_all_workers(self, info, **kwargs):
         return FieldWorker.objects.all()
+
+    def resolve_worker(self, info, worker_id):
+        return FieldWorker.objects.get(pk=worker_id)
 
 
 class createWorker(graphene.Mutation):
