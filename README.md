@@ -2,9 +2,9 @@
 
 ### Servicio en produccion
 
-Ruta API: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/)
+* Ruta API: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/)
 
-Ruta GraphQL: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql)
+* Ruta GraphQL: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql)
 
 ### Instalacion
 1. Crear una instancia con Ubuntu en AWS EC2
