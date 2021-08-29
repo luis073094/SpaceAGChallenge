@@ -28,6 +28,16 @@
 
 5. Testear!
 
+### Tests unitarios de EndPoints
+
+1. Preparar la data para realizar las pruebas
+
+2. Ejecutar:
+```bash
+> cd SpaceAGChallenge
+> cd SpaceAGChallenge
+> py manage.py test
+```
 
 ### Ejemplos para GraphQL
 ```bash
