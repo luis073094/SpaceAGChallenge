@@ -13,4 +13,4 @@ class FieldWorker(models.Model):
     class Meta:
         managed = True
         db_table = 'field_worker'
-        ordering = ['-id']
+        ordering = ['-created_at']
