@@ -2,12 +2,12 @@ FROM python
 
 RUN pip install --upgrade pip
 
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY ./SpaceAGChallenge/SpaceAGChallenge /app
+COPY ./SpaceAGChallenge/SpaceAGChallenge /app/SpaceAGChallenge
+COPY ./SpaceAGChallenge/requirements.txt /app
+COPY ./SpaceAGChallenge/entrypoint.sh /app
 
 WORKDIR /app
 
-COPY ./entrypoint.sh /
-ENTRYPOINT [ "sh", "/entrypoint.sh" ]
+RUN pip install -r requirements.txt
+
+ENTRYPOINT [ "sh", "entrypoint.sh" ]
