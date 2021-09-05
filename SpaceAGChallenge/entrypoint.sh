@@ -1,5 +1,4 @@
 #!/bin/sh
-cd SpaceAGChallenge
 
 python manage.py migrate FieldWorker --no-input
 
