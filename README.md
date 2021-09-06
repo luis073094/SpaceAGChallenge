@@ -2,6 +2,8 @@
 
 ### Servicio en produccion
 
+* Dominio: [http://www.spaceagchallenge.tk/](http://www.spaceagchallenge.tk/)
+
 * Ruta API: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/v1/field_workers/)
 
 * Ruta GraphQL: [http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql](http://ec2-3-128-198-18.us-east-2.compute.amazonaws.com/graphql)
@@ -16,6 +18,8 @@
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu `lsb_release -cs` test"
     sudo apt update
     sudo apt install docker-ce
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 3. Conectarse via FTP y subir el proyecto
